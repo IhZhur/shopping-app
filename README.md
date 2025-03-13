@@ -39,7 +39,7 @@
 🤝 Contact:
 👤 Ihor Zhuravlov
 📧 Email: izhuravlovw@gmail.com
-🔗 GitHub: [YOUR_GITHUB_PROFILE](https://github.com/IhZhur)
+🔗 GitHub: https://github.com/IhZhur
 
 📜 License:
     MIT © 2024 Shopping App
