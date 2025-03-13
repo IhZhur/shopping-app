@@ -1,0 +1,83 @@
+/* Улучшенный стиль шапки */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff; /* Чистый белый фон */
+  color: #333;
+  padding: 16px 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-bottom: 2px solid #f0f0f0;
+}
+
+/* Логотип */
+.header .logo {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.header .logo:hover {
+  color: #ff4d4d;
+}
+
+/* Навигация */
+.header nav {
+  display: flex;
+  align-items: center; /* Выравнивание по одной линии */
+  gap: 20px;
+}
+
+.header nav a {
+  color: #333;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 10px 16px;
+  transition: background 0.3s ease, color 0.3s ease;
+  border-radius: 6px;
+}
+
+.header nav a:hover {
+  background: #f8f8f8;
+  color: #ff4d4d;
+}
+
+/* Кнопка корзины */
+.cart-link {
+  font-weight: bold;
+  background: #ff4d4d;
+  padding: 10px 18px;
+  border-radius: 6px;
+  color: white;
+  font-size: 1rem;
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cart-link:hover {
+  background: #e63e26;
+  transform: scale(1.05);
+}
+
+/* Медиа-запрос для мобильных устройств */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    text-align: center;
+    padding: 16px;
+  }
+
+  .header nav {
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 10px;
+  }
+
+  .cart-link {
+    width: 100%;
+    text-align: center;
+  }
+}

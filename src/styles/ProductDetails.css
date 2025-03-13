@@ -1,0 +1,109 @@
+/* Обновленный стиль страницы деталей товара */
+.product-details {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  background: #f8f8f8;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* Стилизация изображения */
+.product-details img {
+  width: 320px;
+  height: 320px;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.product-details img:hover {
+  transform: scale(1.05);
+}
+
+/* Информация о товаре */
+.details-info {
+  max-width: 520px;
+}
+
+/* Название товара */
+.details-info h1 {
+  font-size: 2rem;
+  margin-bottom: 12px;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Категория товара */
+.details-info .category {
+  font-size: 1rem;
+  color: #777;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Описание товара */
+.details-info .description {
+  font-size: 1.1rem;
+  margin-bottom: 18px;
+  line-height: 1.5;
+  color: #444;
+}
+
+/* Цена товара */
+.details-info .price {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #ff4d4d;
+  margin-bottom: 18px;
+}
+
+/* Кнопка "Add to Cart" */
+.details-info button {
+  background: linear-gradient(135deg, #ff7eb3, #ff758c);
+  color: white;
+  border: none;
+  padding: 14px 22px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.3rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.details-info button:hover {
+  background: linear-gradient(135deg, #ff6381, #ff5e75);
+  transform: scale(1.05);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .product-details {
+    flex-direction: column;
+    text-align: center;
+    padding: 25px;
+  }
+
+  .product-details img {
+    width: 280px;
+    height: 280px;
+  }
+
+  .details-info {
+    max-width: 100%;
+  }
+
+  .details-info h1 {
+    font-size: 1.7rem;
+  }
+
+  .details-info button {
+    width: 100%;
+    font-size: 1.1rem;
+  }
+}

@@ -1,0 +1,221 @@
+.cart-container {
+  padding: 20px;
+}
+
+/* Карточка товара */
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(135deg, #ffffff, #f8f8f8);
+  padding: 16px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.cart-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* Изображение товара */
+.cart-item img {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+/* Название и цена */
+.cart-item .product-details {
+  flex-grow: 1;
+  margin-left: 16px; 
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.cart-item h3 {
+  font-size: 1.2rem;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.cart-item p {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #ff4d4d;
+}
+
+/* Кнопки количества товаров */
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 14px; 
+}
+
+.quantity-controls button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: #28a745;
+  font-weight: bold;
+}
+
+.quantity-controls input {
+  width: 50px;
+  text-align: center;
+  padding: 5px;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+/* Кнопка-троеточие (⋮) */
+.menu-container {
+  position: relative;
+}
+
+.menu-button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.menu-button:hover {
+  opacity: 0.7;
+}
+
+/* Попап удаления товара */
+.menu-popup {
+  position: absolute;
+  right: 0;
+  top: 35px;
+  background: white;
+  padding: 10px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  text-align: center;
+  z-index: 1000;
+}
+
+/* ✅ Кнопка мусорника (🗑) */
+.clear-cart-icon {
+  background-color: transparent;
+  font-size: 1.8rem;
+  color: #ff4d4d;
+  transition: opacity 0.2s ease;
+}
+
+.clear-cart-icon:hover {
+  opacity: 0.7;
+}
+
+/* Попап "Remove All" */
+.clear-cart-popup {
+  position: absolute;
+  right: 0;
+  bottom: 100%; 
+  background: white;
+  padding: 12px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  text-align: center;
+  z-index: 1000;
+}
+
+.clear-cart-popup button {
+  font-size: 1rem;
+  padding: 10px 16px;
+  border-radius: 6px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.clear-cart-popup button:first-child {
+  background-color: #ff4d4d;
+  color: white;
+}
+
+.clear-cart-popup button:last-child {
+  background-color: #ccc;
+  color: black;
+}
+
+.clear-cart-popup button:hover {
+  opacity: 0.9;
+}
+
+/* Кнопка "Proceed to Checkout" */
+.checkout-btn {
+  background: linear-gradient(135deg, #ff7eb3, #ff758c);
+  color: white;
+  font-size: 1rem;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.checkout-btn:hover {
+  background: linear-gradient(135deg, #ff6381, #ff5e75);
+  transform: scale(1.05);
+}
+
+/* Выравнивание кнопок */
+.cart-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  padding-top: 10px;
+  border-top: 2px solid #ddd;
+}
+
+.cart-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .cart-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .cart-summary {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .cart-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .checkout-btn,
+  .clear-cart-icon {
+    width: 100%;
+  }
+
+  .menu-popup,
+  .clear-cart-popup {
+    right: 50%;
+    transform: translateX(50%);
+  }
+}

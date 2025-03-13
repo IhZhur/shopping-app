@@ -1,0 +1,175 @@
+/* Основной контейнер оформления заказа */
+.checkout-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 30px;
+  background: #f8f8f8;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* Заголовок страницы */
+.checkout-container h1 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Контейнер с формой и списком товаров */
+.checkout-content {
+  display: flex;
+  gap: 35px;
+}
+
+/* Форма оформления заказа */
+.checkout-form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Заголовки секций */
+.checkout-form h2 {
+  margin-bottom: 12px;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+/* Поля формы */
+.checkout-form label {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 12px 0 6px;
+}
+
+.checkout-form input,
+.checkout-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box; 
+}
+
+.checkout-form input:focus,
+.checkout-form textarea:focus {
+  border-color: #ff4d4d;
+  outline: none;
+}
+
+.checkout-form textarea {
+  resize: none;
+  height: 90px;
+}
+
+/* Кнопка "Place Order" */
+.checkout-form button {
+  background: linear-gradient(135deg, #ff7eb3, #ff758c);
+  color: white;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 18px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.checkout-form button:hover {
+  background: linear-gradient(135deg, #ff6381, #ff5e75);
+  transform: scale(1.05);
+}
+
+/* Список товаров в заказе */
+.checkout-summary {
+  flex: 1;
+  background: white;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Заголовки */
+.checkout-summary h2 {
+  margin-bottom: 12px;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+/* Отображение товаров в заказе */
+.checkout-item {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 18px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.checkout-item img {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.checkout-item h3 {
+  font-size: 1rem;
+  margin: 0;
+  font-weight: bold;
+  color: #444;
+}
+
+.checkout-item p {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+/* Сообщение после успешного заказа */
+.checkout-success {
+  text-align: center;
+  padding: 60px;
+}
+
+.checkout-success h1 {
+  font-size: 2.2rem;
+  margin-bottom: 12px;
+  color: #333;
+}
+
+.checkout-success p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .checkout-content {
+    flex-direction: column;
+  }
+
+  .checkout-summary {
+    margin-top: 25px;
+  }
+
+  .checkout-form input,
+  .checkout-form textarea {
+    width: 100%;
+  }
+
+  .checkout-form button {
+    width: 100%;
+    font-size: 1.1rem;
+  }
+}
